@@ -16,10 +16,13 @@ themeEditorApp.controllers = angular.module('editorControllers', [ 'ui.bootstrap
 themeEditorApp.controllers.controller('RootCtrl', function($scope, $location,
 		oauth2Provider) {
 
+
 //	Returns true if the viewLocation is the currently viewed page.
 	$scope.isActive = function(viewLocation) {
 		return viewLocation === $location.path();
 	};
+	
+	
 
 //	Returns the OAuth2 signedIn state.
 	$scope.getSignedInState = function() {
@@ -72,4 +75,21 @@ themeEditorApp.controllers.controller('RootCtrl', function($scope, $location,
 				.removeClass('in');
 	};
 
+});
+
+themeEditorApp.controllers.controller('OAuth2LoginModalCtrl', function($scope,
+		$modalInstance, $rootScope, oauth2Provider) {
+	$scope.singInViaModal = function() {
+		oauth2Provider.signIn(function() {
+			gapi.client.oauth2.userinfo.get().execute(function(resp) {
+				$scope.$root.$apply(function() {
+					oauth2Provider.signedIn = true;
+					$scope.$root.alertStatus = 'success';
+					$scope.$root.rootMessages = 'Logged in with ' + resp.email;
+				});
+
+				$modalInstance.close();
+			});
+		});
+	};
 });
