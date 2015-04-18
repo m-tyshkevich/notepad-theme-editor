@@ -1,0 +1,17 @@
+body {
+	background-color: black;
+}
+
+.button {
+	height: 50px;
+	margin-top: 20%;
+    margin-right: 40%;
+    margin-left: 40%;
+	text-align: center;
+	border: 5px solid #dddddd;
+	background-color: black;
+	color: #dddddd;
+	vertical-align: middle;
+	font: 30px arial, sans-serif;
+	padding-top: 10px;
+};
