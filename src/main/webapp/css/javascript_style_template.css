@@ -1,0 +1,43 @@
+.DEFAULT{
+	color: #000000;
+}
+
+.NUMBER{
+	color: #ff0000;
+}
+
+.WORD{
+	color: #808000;
+}
+
+.KEYWORD{
+	color: #0080ff;
+}
+
+.DOUBLESTRING{
+	color: #00ff00;
+}
+
+.SINGLESTRING{
+	color: #55ddc1;
+}
+
+.SYMBOLS{
+	color: #f4d75e;
+}
+
+.REGEX{
+	color: #800080;
+}
+
+.COMMENT{
+	color: #ff8000;
+}
+
+.COMMENTLINE{
+ 	color: #ff0080;
+}
+
+.COMMENTDOC{
+ 	color: #008080;
+}

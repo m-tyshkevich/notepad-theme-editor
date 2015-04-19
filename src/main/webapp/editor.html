@@ -35,6 +35,12 @@
 	<script src="/js/controllers.js"></script>
 	<script src="/js/jquery-events.js"></script>
 	
+	<script src="js/jquery2.js"></script>
+	<script src="js/colpick.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/colpick.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/javascript_style_template.css">
+        
+	
 	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
 	
   
@@ -43,6 +49,86 @@
 <body ng-app="themeEditorApp">
 
 	Have fun
+	
+	<br />
+	<a href="https://github.com/0lesya1317/theme_test/blob/master/stylers.model.xml">Full .xml template file for all languages</a><br/>
+	
+	<h1>JavaScript Coloring Test</h1>
+        
+        <div>
+        <pre>
+	<span class="COMMENTDOC">/**
+ 	<span class="DEFAULT">@author</span> jane;
+	*/</span>
+
+	<span class="COMMENT">/*
+	some comment text here
+	*/</span>
+
+	<span class="COMMENTLINE">//another comment</span>
+	<span class="KEYWORD">boolean</span> <span class="WORD">right</span> <span class="SYMBOLS">=</span> <span class="SINGLESTRING">'true'</span><span class="SYMBOLS">;</span>
+	<span class="KEYWORD">boolean</span> <span class="WORD">wrong</span> <span class="SYMBOLS">=</span> <span class="DOUBLESTRING">"false"</span><span class="SYMBOLS">;</span>
+
+	<span class="KEYWORD">const int</span> <span class="SYMBOLS">=</span> <span class="NUMBER">9</span><span class="SYMBOLS">;</span>
+	<span class="KEYWORD">double</span> <span class="SYMBOLS">=</span> <span class="NUMBER">2.5</span> <span class="SYMBOLS">+</span> <span class="NUMBER">3.0</span><span class="SYMBOLS">;</span>
+
+	<span class="KEYWORD">var</span> <span class="WORD">regExp1</span> <span class="SYMBOLS">=</span> <span class="REGEX">/w3schools/i</span><span class="SYMBOLS">;</span>
+	<span class="KEYWORD">var</span> <span class="WORD">regExp2</span> <span class="SYMBOLS">=</span> <span class="REGEX">/microsoft/i</span><span class="SYMBOLS">;</span>
+
+	<span class="WORD">Music</span><span class="SYMBOLS">.</span><span class="WORD">play</span> <span class="SYMBOLS">=</span> <span class="KEYWORD">function</span><span class="SYMBOLS">(</span><span class="WORD">track</span><span class="SYMBOLS">){</span>
+		<span class="KEYWORD">if</span><span class="SYMBOLS">(</span><span class="WORD">track</span> <span class="SYMBOLS">!=</span> <span class="DOUBLESTRING">""</span><span class="SYMBOLS">){</span>
+			<span class="WORD">start_playing</span><span class="SYMBOLS">(</span><span class="WORD">track</span><span class="SYMBOLS">)</span><span class="SYMBOLS">;</span>
+		<span class="SYMBOLS">}</span>
+	<span class="SYMBOLS">};</span>
+		</pre>
+        </div>
+        
+        
+        
+        <style>
+			.color-box-default, .color-box-number {
+				float:right;
+				width:30px;
+				height:30px;
+				margin:5px;
+				border: 1px solid white;
+			}
+		</style>
+			
+			<br /><br /><br />
+			<div id='changeDEFAULT' style ="float:left">Change DEFAULT color : <span class="color-box-default"> </span></div>
+			
+			<script>
+				$('.color-box-default').colpick({
+					colorScheme:'dark',
+					layout:'rgbhex',
+					color:'000000',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".DEFAULT").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#000000');
+			</script>
+			
+			<br /><br /><br />
+			<div id='changeNUMBER' style ="float:left">Change NUMBER color : <span class="color-box-number"> </span></div>
+			
+			<script>
+				$('.color-box-number').colpick({
+					colorScheme:'dark',
+					layout:'rgbhex',
+					color:'000000',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".NUMBER").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#ff0000');
+			</script>
+        
+	
+	
 
 </body>
 
