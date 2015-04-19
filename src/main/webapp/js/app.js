@@ -4,11 +4,16 @@ var app = angular.module('themeEditorApp',
     ['editorControllers', 'ngRoute', 'ui.bootstrap']).
     config(['$routeProvider',
         function ($routeProvider) {
-            $routeProvider.
-                when('/', {
-                    templateUrl: '/webapp/index.html'
-                }).
-                otherwise({
+            $routeProvider
+                .when('/', {
+                    templateUrl: '/webapp/index.html',
+                    controller: 'RootCtrl'
+                })
+                .when('/editor', {
+                    templateUrl: '/webapp/editor.html',
+                    controller: ''
+                })
+                .otherwise({
                     redirectTo: '/'
                 });
         }]);

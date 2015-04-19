@@ -1,17 +1,18 @@
 body {
 	background-color: black;
+	color: #919191;
 }
 
 .button {
 	height: 50px;
-	margin-top: 20%;
+	margin-top: 10%;
     margin-right: 40%;
     margin-left: 40%;
 	text-align: center;
-	border: 5px solid #dddddd;
+	border: 5px solid #919191;
 	background-color: black;
-	color: #dddddd;
-	vertical-align: middle;
+	color: #919191;
 	font: 30px arial, sans-serif;
 	padding-top: 10px;
 };
+
