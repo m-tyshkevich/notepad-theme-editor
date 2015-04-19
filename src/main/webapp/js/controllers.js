@@ -40,20 +40,20 @@ themeEditorApp.controllers.controller('RootCtrl', function($scope, $location,
 	/**
 	 * Calls the OAuth2 authentication method.
 	 */
-	$scope.signIn = function() {
+	// DO NOT REMOVE THIS!!!!!!!!!
+	/*$scope.signIn = function() {
 		oauth2Provider.signIn(function() {
 			gapi.client.oauth2.userinfo.get().execute(function(resp) {
 				$scope.$apply(function() {
 					if (resp.email) {
 						oauth2Provider.signedIn = true;
-						alert("oauth2Provider.signedIn = true;");
 						$scope.alertStatus = 'success';
 						$scope.rootMessages = 'Logged in with ' + resp.email;
 					}
 				});
 			});
 		});
-	};
+	};*/
 
 	/**
 	 * Render the signInButton and restore the credential if it's stored in the

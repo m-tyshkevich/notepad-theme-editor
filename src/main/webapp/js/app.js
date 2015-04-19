@@ -49,6 +49,8 @@ app.factory('oauth2Provider', function ($modal) {
             'scope': oauth2Provider.SCOPES,
             'callback': callback
         });
+        //from controllers.js
+       	oauth2Provider.signedIn = true;
     };
 
 //	Logs out the user.
