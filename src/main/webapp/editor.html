@@ -55,8 +55,26 @@
 	
 	<h1>JavaScript Coloring Test</h1>
         
-        <div>
-        <pre>
+        
+        <style>
+			.color-box-default, .color-box-number, .color-box-word, .color-box-keyword, 
+			.color-box-doublestring, .color-box-singlestring, .color-box-symbols, .color-box-regex, 
+			.color-box-comment, .color-box-commentline, .color-box-commentdoc {
+				float:left;
+				right:5px;
+				width:30px;
+				height:30px;
+				margin:5px;
+				border: 1px solid black;
+			}
+		</style>
+		
+		
+			<table class="javascript-table" border="1" style="width:50%">
+				<tr>
+					<td  rowspan="11">
+						<div>
+        				<pre>
 	<span class="COMMENTDOC">/**
  	<span class="DEFAULT">@author</span> jane;
 	*/</span>
@@ -80,27 +98,17 @@
 			<span class="WORD">start_playing</span><span class="SYMBOLS">(</span><span class="WORD">track</span><span class="SYMBOLS">)</span><span class="SYMBOLS">;</span>
 		<span class="SYMBOLS">}</span>
 	<span class="SYMBOLS">};</span>
-		</pre>
-        </div>
+	</pre>
+    </div>
         
+        		</td>
+        		
         
-        
-        <style>
-			.color-box-default, .color-box-number {
-				float:right;
-				width:30px;
-				height:30px;
-				margin:5px;
-				border: 1px solid white;
-			}
-		</style>
-			
-			<br /><br /><br />
-			<div id='changeDEFAULT' style ="float:left">Change DEFAULT color : <span class="color-box-default"> </span></div>
+			<td>
+			<div id='changeDEFAULT' style="float:left"> &#8594; DEFAULT color : <span class="color-box-default"> </span></div>
 			
 			<script>
 				$('.color-box-default').colpick({
-					colorScheme:'dark',
 					layout:'rgbhex',
 					color:'000000',
 					onSubmit:function(hsb,hex,rgb,el) {
@@ -110,15 +118,16 @@
 					}
 				}).css('background-color', '#000000');
 			</script>
-			
-			<br /><br /><br />
-			<div id='changeNUMBER' style ="float:left">Change NUMBER color : <span class="color-box-number"> </span></div>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeNUMBER' style ="float:left"> &#8594; NUMBER color : <span class="color-box-number"> </span></div>
 			
 			<script>
 				$('.color-box-number').colpick({
-					colorScheme:'dark',
 					layout:'rgbhex',
-					color:'000000',
+					color:'ff0000',
 					onSubmit:function(hsb,hex,rgb,el) {
 						$(".NUMBER").css("color", '#' + hex);
 						$(el).css('background-color', '#'+hex);
@@ -126,10 +135,163 @@
 					}
 				}).css('background-color', '#ff0000');
 			</script>
-        
-	
-	
-
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeWORD' style ="float:left"> &#8594; WORD color : <span class="color-box-word"> </span></div>
+			
+			<script>
+				$('.color-box-word').colpick({
+					layout:'rgbhex',
+					color:'808000',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".WORD").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#808000');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeKEYWORD' style ="float:left"> &#8594; KEYWORD color : <span class="color-box-keyword"> </span></div>
+			
+			<script>
+				$('.color-box-keyword').colpick({
+					layout:'rgbhex',
+					color:'0080ff',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".KEYWORD").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#0080ff');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeDOUBLESTRING' style ="float:left"> &#8594; DOUBLESTRING color : <span class="color-box-doublestring"> </span></div>
+			
+			<script>
+				$('.color-box-doublestring').colpick({
+					layout:'rgbhex',
+					color:'00ff00',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".DOUBLESTRING").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#00ff00');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeSINGLESTRING' style ="float:left"> &#8594; SINGLESTRING color : <span class="color-box-singlestring"> </span></div>
+			
+			<script>
+				$('.color-box-singlestring').colpick({
+					layout:'rgbhex',
+					color:'55ddc1',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".SINGLESTRING").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#55ddc1');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeSYMBOLS' style ="float:left"> &#8594; SYMBOLS color : <span class="color-box-symbols"> </span></div>
+			
+			<script>
+				$('.color-box-symbols').colpick({
+					layout:'rgbhex',
+					color:'f4d75e',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".SYMBOLS").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#f4d75e');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeREGEX' style ="float:left"> &#8594; REGEX color : <span class="color-box-regex"> </span></div>
+			
+			<script>
+				$('.color-box-regex').colpick({
+					layout:'rgbhex',
+					color:'800080',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".REGEX").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#800080');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeCOMMENT' style ="float:left"> &#8594; COMMENT color : <span class="color-box-comment"> </span></div>
+			
+			<script>
+				$('.color-box-comment').colpick({
+					layout:'rgbhex',
+					color:'ff8000',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".COMMENT").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#ff8000');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeCOMMENTLINE' style ="float:left"> &#8594; COMMENTLINE color : <span class="color-box-commentline"> </span></div>
+			
+			<script>
+				$('.color-box-commentline').colpick({
+					layout:'rgbhex',
+					color:'ff0080',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".COMMENTLINE").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#ff0080');
+			</script>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<div id='changeCOMMENTDOC' style ="float:left"> &#8594; COMMENTDOC color : <span class="color-box-commentdoc"> </span></div>
+			
+			<script>
+				$('.color-box-commentdoc').colpick({
+					layout:'rgbhex',
+					color:'008080',
+					onSubmit:function(hsb,hex,rgb,el) {
+						$(".COMMENTDOC").css("color", '#' + hex);
+						$(el).css('background-color', '#'+hex);
+						$(el).colpickHide();
+					}
+				}).css('background-color', '#008080');
+			</script>
+			</td>
+			</tr>
+			</table>
+			<br /><br /><br /><br /><br /><br />
 </body>
 
 </html>
