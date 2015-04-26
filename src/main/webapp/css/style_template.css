@@ -1,43 +1,43 @@
-.DEFAULT{
+.P43{
 	color: #000000;
 }
 
-.NUMBER{
+.P44{
 	color: #ff0000;
 }
 
-.WORD{
+.P45{
 	color: #808000;
 }
 
-.KEYWORD{
+.P46{
 	color: #0080ff;
 }
 
-.DOUBLESTRING{
+.P47{
 	color: #00ff00;
 }
 
-.SINGLESTRING{
+.P48{
 	color: #55ddc1;
 }
 
-.SYMBOLS{
-	color: #f4d75e;
+.P49{
+	color: #e2db50;
 }
 
-.REGEX{
+.P50{
 	color: #800080;
 }
 
-.COMMENT{
+.P51{
 	color: #ff8000;
 }
 
-.COMMENTLINE{
+.P52{
  	color: #ff0080;
 }
 
-.COMMENTDOC{
+.P53{
  	color: #008080;
 }
