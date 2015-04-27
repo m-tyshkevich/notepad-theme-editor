@@ -18,6 +18,11 @@
     <dependencies>
         <!-- Compile/runtime dependencies -->
         <dependency>
+    <groupId>com.google.appengine.tools</groupId>
+    <artifactId>appengine-gcs-client</artifactId>
+    <version>RELEASE</version>
+</dependency>
+        <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
             <version>${appengine.target.version}</version>
