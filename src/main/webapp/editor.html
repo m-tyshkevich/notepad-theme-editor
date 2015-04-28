@@ -41,6 +41,7 @@
 	<script src="/js/app.js"></script>
 	<script src="/js/controllers.js"></script>
 	<script src="/js/jquery-events.js"></script>
+	<script src="/js/cookies.js"></script>
 	
 	<script src="js/jquery2.js"></script>
 	<script src="js/colpick.js" type="text/javascript"></script>
@@ -351,7 +352,7 @@
 			<script>
 				$('.color-box-p49').colpick({
 					layout:'rgbhex',
-					color:'f4d75e',
+					color:'e2db50',
 					onSubmit:function(hsb,hex,rgb,el) {
 						$(".P49").css("color", '#' + hex);
 						$(el).css('background-color', '#'+hex);
@@ -1380,14 +1381,18 @@
         <br />
 		<textarea id="modifiedText" style="display:none"> </textarea>
         </form>
-       
+        <input type="button" value="Save Template to Textarea" onClick="replaceCharacters();">
+        
         
         <br /><br /><br /><br /><br />
         
         <P>Choose a name for your theme:  <input value ="Thememe" id="name_field"></P>
 
+
+<div id="hide-when-logged-out">
 <P><input id="input_save" type="button" value="please wait" 
   onclick="will_be_set_after_endpoints_apis_loaded"></P>
+</div>
  
   <p id="downloadify">
 				You must have Flash 10 installed to download this file.
@@ -1400,109 +1405,6 @@
 					return xmlname;
 				},
 				data: function(){ 
-					
-					var origContent = document.getElementById("template_textarea").value;
-					var inLine_43 = "<WordsStyle name=\"DEFAULT\" styleID=\"41\" fgColor=\""+document.form1.in_p43.value;
-					var outLine_43 = "<WordsStyle name=\"DEFAULT\" styleID=\"41\" fgColor=\""+document.form1.out_p43.value;
-					var newString_43 = origContent.split(inLine_43);
-					newString_43 = newString_43.join(outLine_43);
-					document.getElementById("modifiedText").value = newString_43;
-					document.getElementById("template_textarea").value = newString_43;
-					document.form1.in_p43.value = document.form1.out_p43.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_44 = "<WordsStyle name=\"NUMBER\" styleID=\"45\" fgColor=\""+document.form1.in_p44.value;
-					outLine_44 = "<WordsStyle name=\"NUMBER\" styleID=\"45\" fgColor=\""+document.form1.out_p44.value;
-					newString_44 = origContent.split(inLine_44);
-					newString_44 = newString_44.join(outLine_44);
-					document.getElementById("modifiedText").value = newString_44;
-					document.getElementById("template_textarea").value = newString_44;
-					document.form1.in_p44.value = document.form1.out_p44.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_45 = "<WordsStyle name=\"WORD\" styleID=\"46\" fgColor=\""+document.form1.in_p45.value;
-					outLine_45 = "<WordsStyle name=\"WORD\" styleID=\"46\" fgColor=\""+document.form1.out_p45.value;
-					newString_45 = origContent.split(inLine_45);
-					newString_45 = newString_45.join(outLine_45);
-					document.getElementById("modifiedText").value = newString_45;
-					document.getElementById("template_textarea").value = newString_45;
-					document.form1.in_p45.value = document.form1.out_p45.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_46 = "<WordsStyle name=\"KEYWORD\" styleID=\"47\" fgColor=\""+document.form1.in_p46.value;
-					outLine_46 = "<WordsStyle name=\"KEYWORD\" styleID=\"47\" fgColor=\""+document.form1.out_p46.value;
-					newString_46 = origContent.split(inLine_46);
-					newString_46 = newString_46.join(outLine_46);
-					document.getElementById("modifiedText").value = newString_46;
-					document.getElementById("template_textarea").value = newString_46;
-					document.form1.in_p46.value = document.form1.out_p46.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_47 = "<WordsStyle name=\"DOUBLESTRING\" styleID=\"48\" fgColor=\""+document.form1.in_p47.value;
-					outLine_47 = "<WordsStyle name=\"DOUBLESTRING\" styleID=\"48\" fgColor=\""+document.form1.out_p47.value;
-					newString_47 = origContent.split(inLine_47);
-					newString_47 = newString_47.join(outLine_47);
-					document.getElementById("modifiedText").value = newString_47;
-					document.getElementById("template_textarea").value = newString_47;
-					document.form1.in_p47.value = document.form1.out_p47.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_48 = "<WordsStyle name=\"SINGLESTRING\" styleID=\"49\" fgColor=\""+document.form1.in_p48.value;
-					outLine_48 = "<WordsStyle name=\"SINGLESTRING\" styleID=\"49\" fgColor=\""+document.form1.out_p48.value;
-					newString_48 = origContent.split(inLine_48);
-					newString_48 = newString_48.join(outLine_48);
-					document.getElementById("modifiedText").value = newString_48;
-					document.getElementById("template_textarea").value = newString_48;
-					document.form1.in_p48.value = document.form1.out_p48.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_49 = "<WordsStyle name=\"SYMBOLS\" styleID=\"50\" fgColor=\""+document.form1.in_p49.value;
-					outLine_49 = "<WordsStyle name=\"SYMBOLS\" styleID=\"50\" fgColor=\""+document.form1.out_p49.value;
-					newString_49 = origContent.split(inLine_49);
-					newString_49 = newString_49.join(outLine_49);
-					document.getElementById("modifiedText").value = newString_49;
-					document.getElementById("template_textarea").value = newString_49;
-					document.form1.in_p49.value = document.form1.out_p49.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_50 = "<WordsStyle name=\"REGEX\" styleID=\"52\" fgColor=\""+document.form1.in_p50.value;
-					outLine_50 = "<WordsStyle name=\"REGEX\" styleID=\"52\" fgColor=\""+document.form1.out_p50.value;
-					newString_50 = origContent.split(inLine_50);
-					newString_50 = newString_50.join(outLine_50);
-					document.getElementById("modifiedText").value = newString_50;
-					document.getElementById("template_textarea").value = newString_50;
-					document.form1.in_p50.value = document.form1.out_p50.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_51 = "<WordsStyle name=\"COMMENT\" styleID=\"42\" fgColor=\""+document.form1.in_p51.value;
-					outLine_51 = "<WordsStyle name=\"COMMENT\" styleID=\"42\" fgColor=\""+document.form1.out_p51.value;
-					newString_51 = origContent.split(inLine_51);
-					newString_51 = newString_51.join(outLine_51);
-					document.getElementById("modifiedText").value = newString_51;
-					document.getElementById("template_textarea").value = newString_51;
-					document.form1.in_p51.value = document.form1.out_p51.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_52 = "<WordsStyle name=\"COMMENTLINE\" styleID=\"43\" fgColor=\""+document.form1.in_p52.value;
-					outLine_52 = "<WordsStyle name=\"COMMENTLINE\" styleID=\"43\" fgColor=\""+document.form1.out_p52.value;
-					newString_52 = origContent.split(inLine_52);
-					newString_52 = newString_52.join(outLine_52);
-					document.getElementById("modifiedText").value = newString_52;
-					document.getElementById("template_textarea").value = newString_52;
-					document.form1.in_p52.value = document.form1.out_p52.value;
-					
-					origContent = document.getElementById("template_textarea").value;
-					inLine_53 = "<WordsStyle name=\"COMMENTDOC\" styleID=\"44\" fgColor=\""+document.form1.in_p53.value;
-					outLine_53 = "<WordsStyle name=\"COMMENTDOC\" styleID=\"44\" fgColor=\""+document.form1.out_p53.value;
-					newString_53 = origContent.split(inLine_53);
-					newString_53 = newString_53.join(outLine_53);
-					document.getElementById("modifiedText").value = newString_53;
-					document.getElementById("template_textarea").value = newString_53;
-					document.form1.in_p53.value = document.form1.out_p53.value;
-					
-					
-					
-					
 					return document.getElementById('modifiedText').value;
 				},
 				onComplete: function(){ alert('Your File Has Been Saved!'); },
@@ -1515,7 +1417,6 @@
 				height: 30,
 				transparent: true,
 				append: false
-
 			});
 		</script>
   
@@ -1523,7 +1424,16 @@
 
 <P><input id="load_by_name" type="button" value="please wait" 
   onclick="will_be_set_after_endpoints_apis_loaded"></P>
+  
         
 </body>
 
 </html>
+
+
+
+
+
+
+
+
