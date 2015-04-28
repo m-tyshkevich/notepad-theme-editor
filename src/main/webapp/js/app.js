@@ -33,7 +33,7 @@ app.constant('HTTP_ERRORS', {
 
 app.factory('oauth2Provider', function ($modal) {
     var oauth2Provider = {
-        CLIENT_ID: '107452284729-1dimd8i8mj5hv641276cl3a20qvk1eqd.apps.googleusercontent.com',
+        CLIENT_ID: '957674606186-kncabfjbqldlohbgdlarujbgr1t2cb34.apps.googleusercontent.com',
         SCOPES: 'https://www.googleapis.com/auth/userinfo.email profile',
         signedIn: false
     };

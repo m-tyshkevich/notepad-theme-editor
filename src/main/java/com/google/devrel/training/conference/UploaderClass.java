@@ -18,7 +18,7 @@ public class UploaderClass {
     		Cloud example = new Cloud();
     		try {
     		      /** Write and read back a map */
-    		      GcsFilename filename = new GcsFilename("notepad-bucket-kobzar", (name+".xml"));
+    		      GcsFilename filename = new GcsFilename("notepad-bucket-kobzar", (name+".txt"));
     		    //  Map<String, String> mapContent = new HashMap<>();
     		    //  mapContent.put(name, content);
 
