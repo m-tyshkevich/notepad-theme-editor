@@ -15,6 +15,18 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+    $(".link").mouseenter(function(){
+    	$(this).css("color", "#ffffff");
+    	$(this).children("a").css("color", "#ffffff");
+    });
+    $(".link").mouseleave(function(){
+    	$(this).css("color", "#919191");
+    	$(this).children("a").css("color", "#919191");
+    });
+});
+
+
+$(document).ready(function(){
     $("#to-editor").click(function(){
     	window.location.href = "/editor.html";
     });
