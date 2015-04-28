@@ -35,6 +35,13 @@ public class UploaderEndpoints {
     public LoaderClass loadFromCloud(@Named("name") String name) throws ClassNotFoundException, IOException{
         return new LoaderClass(name);
     }
+    
+    @ApiMethod(name = "makeList", path = "makeList",
+            httpMethod = HttpMethod.GET)
+
+    public Lister makeList(@Named("name") String name) throws ClassNotFoundException, IOException{
+        return new Lister(name);
+    }
   //  @ApiMethod(name = "uploadToCloud", path = "uploadToCloud",
     //        httpMethod = HttpMethod.POST)
     //public UploaderClass uploadToCloud(@Named("name") String name, @Named("content") String content) throws ClassNotFoundException, IOException {

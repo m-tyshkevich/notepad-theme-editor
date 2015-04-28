@@ -9,7 +9,7 @@ import java.util.Map;
 import com.google.appengine.tools.cloudstorage.GcsFilename;
 
 public class UploaderClass {
-    public String message = "Downloading";
+    public String message = "This message should never display. You done messed up.";
 
     
     public UploaderClass (String name, String content, String placeholder) throws IOException, ClassNotFoundException {
@@ -28,7 +28,16 @@ public class UploaderClass {
     		      byte[] byteContent = content.getBytes(Charset.forName("UTF-8"));
 
     		      example.writeToFile(filename, byteContent);
+    		      
+    		      filename = new GcsFilename("notepad-bucket-kobzar", ("ThemeList.xml"));
+    		      byte[] bytest = example.readFromFile(filename);
+    		    	 String decoded = new String(bytest, "UTF-8");
+    		    	 
+    		      
+    		      decoded = decoded + name + "|";
+    		      byteContent = decoded.getBytes(Charset.forName("UTF-8"));
 
+    		      example.writeToFile(filename, byteContent);
     			    }
     		 finally {
     		   //   example.helper.tearDown();
@@ -36,7 +45,7 @@ public class UploaderClass {
     		
     	}
     	else{
-        this.message = ("Your download should start now (actually not)");
+        //this.message = ("Your download should start now (actually not)");
     	}
     	}
 
