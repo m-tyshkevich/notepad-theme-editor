@@ -1,0 +1,18 @@
+body {
+	background-color: black;
+	color: #919191;
+}
+
+.example {
+	background-color: white;
+}
+
+.color-box-p43, .color-box-p44, .color-box-p45, .color-box-p46, 
+			.color-box-p47, .color-box-p48, .color-box-p49, .color-box-p50, 
+			.color-box-p51, .color-box-p52, .color-box-p53 {
+				float:left;
+				right:5px;
+				width:50px;
+				height:25px;
+				border: 1px solid white;
+}

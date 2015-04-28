@@ -162,7 +162,7 @@ function changeList (response) {
 	
 	str+=	'</li>';
 	str += '</ul>';
-	$('body').append(str);
+	$('#place_for_list').append(str);
 }
 
 
