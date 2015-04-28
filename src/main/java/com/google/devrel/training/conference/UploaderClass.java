@@ -24,16 +24,12 @@ public class UploaderClass {
 
     		    //  example.writeObjectToFile(filename, mapContent);
 
-    		    //  System.out.println("Wrote " + mapContent + " read: " + example.readObjectFromFile(filename));
-
     		      /** Write and read back a byteArray */
     		      byte[] byteContent = content.getBytes(Charset.forName("UTF-8"));
 
     		      example.writeToFile(filename, byteContent);
 
-    		    //  System.out.println("Wrote " + Arrays.toString(byteContent) + " read: "
-    		      //    + Arrays.toString(example.readFromFile(filename)));
-    		    }
+    			    }
     		 finally {
     		   //   example.helper.tearDown();
     		    }

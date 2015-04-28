@@ -35,10 +35,6 @@ public class UploaderEndpoints {
     //    return new UploaderClass(name, content, null);
    // }
     
-    @ApiMethod(name ="download", path = "download", httpMethod = HttpMethod.POST)
-    public UploaderClass download(@Named("name") String name, @Named("content") String content) throws ClassNotFoundException, IOException{
-    return new UploaderClass(name, content, "1");
-    }
-    
+ 
 
 }

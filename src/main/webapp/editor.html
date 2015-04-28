@@ -17,7 +17,8 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.js"></script>
 	<script	src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script	src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-	
+	<script type="text/javascript" src="js/swfobject.js"></script>
+		<script type="text/javascript" src="js/downloadify.min.js"></script>
 	<script src="uploader.js"></script>
 	
 <script src="https://apis.google.com/js/client.js?onload=init"></script>
@@ -1487,8 +1488,31 @@
 
 <P><input id="input_save" type="button" value="please wait" 
   onclick="will_be_set_after_endpoints_apis_loaded"></P>
-  <P><input id="download_button" type="button" value="please wait" 
-  onclick="will_be_set_after_endpoints_apis_loaded"></P>
+  <p id="downloadify">
+				You must have Flash 10 installed to download this file.
+			</p>
+  
+ <script type="text/javascript">
+			Downloadify.create('downloadify',{
+				filename: function(){
+					var xmlname = document.getElementById('name_field').value+".xml"
+					return xmlname;
+				},
+				data: function(){ 
+					return document.getElementById('modifiedText').value;
+				},
+				onComplete: function(){ alert('Your File Has Been Saved!'); },
+				onCancel: function(){ alert('You have cancelled the saving of this file.'); },
+				onError: function(){ alert('You must put something in the File Contents or there will be nothing to save!'); },
+				transparent: false,
+				swf: 'media/downloadify.swf',
+				downloadImage: 'images/download.png',
+				width: 100,
+				height: 30,
+				transparent: true,
+				append: false
+			});
+		</script>
         
 </body>
 

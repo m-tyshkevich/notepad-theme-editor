@@ -48,11 +48,7 @@ function enableButtons () {
 	// Update the button label now that the button is active
 	btn.value="Save to cloud";
 	
-	btn = document.getElementById("download_button");
-	btn.onclick=function(){download(document.querySelector('#name_field').value,  document.querySelector('#modifiedText').value);};
-	
-	// Update the button label now that the button is active
-	btn.value="Save to hard drive";
+
 	
 	
 }
@@ -64,13 +60,7 @@ function enableButtons () {
  * Illustrates calling an endpoints function that takes an argument.
  */
 function uploadToCloud (name, content) {
-	// Get the name from the name_field element
-	//var name = document.getElementById("name_field").value;
-	//var content = document.getElementById("modifiedText").value;
 	
-	// Call the sayHelloByName() function.
-	// It takes one argument "name"
-	// On success, pass the response to sayHelloCallback()
 	var request = gapi.client.uploaderendpoints.uploadToCloud({'name': name, 'content': content});
 	request.execute(callback);
 }
@@ -82,12 +72,7 @@ function callback (response) {
 	alert(response.message);	
 }
 
-function download(name, content){
-	//var name = document.getElementById("name_field").value;
-	//var content = document.getElementById("modifiedText").value; 
-	var request = gapi.client.uploaderendpoints.download({'name': name, 'content': content});
-	request.execute(callback);
-	}
+
 
 
 
