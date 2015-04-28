@@ -46,11 +46,11 @@
 
 	<div ng-controller="RootCtrl">
 
-		<div class="button" id="signInLink" ng-hide="getSignedInState()" on-click="return false">
+		<div class="button" id="signInLink" on-click="return false">
 			<a class="btn btn-default btn-lg" ng-click="signIn()"> Sign In </a>
 		</div>
 
-		<div class="button" id="signOutLink" ng-show="getSignedInState()" on-click="return false">
+		<div class="button" id="signOutLink" on-click="return false">
 			<a class="btn btn-default btn-lg" ng-click="signOut()"> Log out </a>
 		</div>
 		

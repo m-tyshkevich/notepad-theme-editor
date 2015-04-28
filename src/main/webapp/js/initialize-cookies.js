@@ -1,6 +1,9 @@
 $(document).ready(function(){
+	if (getCookie("beenHere") != "yes"){
+		setCookie("loggedin", "false");
+		setCookie("beenHere", "yes");
+	}
 	if (getCookie("loggedin") != "true"){
-		//alert("!!!loggedin = " + getCookie("loggedin"));
 		setCookie("loggedin", "false");
 		setCookie("username", "none");
 	}

@@ -1,10 +1,23 @@
 $(document).ready(function(){
-	checkIfLoggedIn();
+	//alert("I'm here");
+	if (checkIfLoggedIn()){
+		$('#hide-when-logged-out').show();
+		$('#signInLink').hide();
+		$('#signOutLink').show();
+	} else {
+		$('#hide-when-logged-out').hide();
+		$('#signInLink').show();
+		$('#signOutLink').hide();
+	}
 	$('#signInLink').click(function(){
-		setCookie("loggedin", "true");	
+		setCookie("loggedin", "true");
+		$('#signInLink').hide();
+		$('#signOutLink').show();
 	});
 	$('#signOutLink').click(function(){
-		setCookie("loggedin", "false");	
+		setCookie("loggedin", "false");
+		$('#signInLink').show();
+		$('#signOutLink').hide();
 	});
 });
 
