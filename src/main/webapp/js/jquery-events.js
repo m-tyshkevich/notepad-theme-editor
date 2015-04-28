@@ -13,3 +13,9 @@ $(document).ready(function(){
     	$(this).children("a").css("color", "#919191");
     });
 });
+
+$(document).ready(function(){
+    $("#to-editor").click(function(){
+    	window.location.href = "/editor.html";
+    });
+});
