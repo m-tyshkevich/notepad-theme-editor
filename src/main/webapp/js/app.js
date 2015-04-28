@@ -1,4 +1,26 @@
-'use strict';
+"use strict";
+
+var app = angular.module('themeEditorApp',
+	    ['editorControllers', 'ngRoute', 'ui.bootstrap']).
+	    config(['$routeProvider',
+	        function ($routeProvider) {
+	            $routeProvider.
+	                when('/about', {
+	                    templateUrl: '/partials/about.html',
+	                    controller: 'AboutCrtl'
+	                }).
+	                when('/editor2', {
+	                    templateUrl: '/partials/theditor.html',
+	                    controller: 'EditorCtrl'
+	                }).
+	                when('/', {
+	                    templateUrl: '/partials/home.html'
+	                }).
+	                otherwise({
+	                    redirectTo: '/'
+	                });
+	        }]);
+
 
 var app = angular.module('themeEditorApp',
     ['editorControllers', 'ngRoute', 'ui.bootstrap']).
@@ -6,12 +28,16 @@ var app = angular.module('themeEditorApp',
         function ($routeProvider) {
             $routeProvider
                 .when('/', {
-                    templateUrl: '/webapp/index.html',
+                    templateUrl: 'index.html',
                     controller: 'RootCtrl'
                 })
                 .when('/editor', {
-                    templateUrl: '/webapp/editor.html',
+                    templateUrl: 'editor.html',
                     controller: ''
+                })
+                .when('/about', {
+                    templateUrl: '/partials/about.html',
+                    controller: 'AboutCtrl'
                 })
                 .otherwise({
                     redirectTo: '/'
@@ -33,7 +59,7 @@ app.constant('HTTP_ERRORS', {
 
 app.factory('oauth2Provider', function ($modal) {
     var oauth2Provider = {
-        CLIENT_ID: '957674606186-kncabfjbqldlohbgdlarujbgr1t2cb34.apps.googleusercontent.com',
+        CLIENT_ID: '107452284729-1dimd8i8mj5hv641276cl3a20qvk1eqd.apps.googleusercontent.com',
         SCOPES: 'https://www.googleapis.com/auth/userinfo.email profile',
         signedIn: false
     };

@@ -34,14 +34,17 @@ themeEditorApp.controllers.controller('RootCtrl', function($scope, $location,
 	 * @returns {oauth2Provider.signedIn|*} true if siendIn, false otherwise.
 	 */
 	$scope.getSignedInState = function() {
+		/*if (oauth2Provider.signedIn === true)
+			alert("you are signed in");
+		else 
+			alert("you aren't signed in");*/
 		return oauth2Provider.signedIn;
 	};
 
 	/**
 	 * Calls the OAuth2 authentication method.
 	 */
-	// DO NOT REMOVE THIS!!!!!!!!!
-	/*$scope.signIn = function() {
+	$scope.signIn = function() {
 		oauth2Provider.signIn(function() {
 			gapi.client.oauth2.userinfo.get().execute(function(resp) {
 				$scope.$apply(function() {
@@ -53,7 +56,7 @@ themeEditorApp.controllers.controller('RootCtrl', function($scope, $location,
 				});
 			});
 		});
-	};*/
+	};
 
 	/**
 	 * Render the signInButton and restore the credential if it's stored in the
@@ -120,3 +123,17 @@ themeEditorApp.controllers.controller('OAuth2LoginModalCtrl', function($scope,
 		});
 	};
 });
+
+
+
+themeEditorApp.controllers.controller('AboutCtrl',
+	    function ($scope, $log, oauth2Provider, HTTP_ERRORS) {
+
+	       
+	    });
+
+themeEditorApp.controllers.controller('EditorCtrl',
+	    function ($scope, $log, oauth2Provider, HTTP_ERRORS) {
+
+	       
+	    });
