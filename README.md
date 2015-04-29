@@ -1,4 +1,4 @@
-<h1>About&nbsp;&nbsp;<a href="https://notepad-theme.appspot.com/">Notepad++&nbsp;&nbsp;Theme Editor</a></h1>
+<h1>About&nbsp;&nbsp;<a href="https://notepad-kobzar-editor.appspot.com/">Notepad++&nbsp;&nbsp;Theme Editor</a></h1>
 
    Created by Margaryta Tyshkevich, Olesya Yaremenko and Roman Kobzar.
    <br />
